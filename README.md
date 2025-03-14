@@ -1,50 +1,88 @@
+# SmartCalcShop Calculator
 
-# TypeScript
+A modern, iOS-style calculator app built with React Native and Expo.
 
-[![GitHub Actions CI](https://github.com/microsoft/TypeScript/workflows/CI/badge.svg)](https://github.com/microsoft/TypeScript/actions?query=workflow%3ACI)
-[![npm version](https://badge.fury.io/js/typescript.svg)](https://www.npmjs.com/package/typescript)
-[![Downloads](https://img.shields.io/npm/dm/typescript.svg)](https://www.npmjs.com/package/typescript)
-[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/microsoft/TypeScript/badge)](https://securityscorecards.dev/viewer/?uri=github.com/microsoft/TypeScript)
+## Features
 
+- Clean, iOS-inspired user interface
+- Basic arithmetic operations (+, -, ×, ÷)
+- Special functions (±, %, Clear)
+- Responsive design for various screen sizes
+- Cross-platform compatibility (iOS and Android)
 
-[TypeScript](https://www.typescriptlang.org/) is a language for application-scale JavaScript. TypeScript adds optional types to JavaScript that support tools for large-scale JavaScript applications for any browser, for any host, on any OS. TypeScript compiles to readable, standards-based JavaScript. Try it out at the [playground](https://www.typescriptlang.org/play/), and stay up to date via [our blog](https://blogs.msdn.microsoft.com/typescript) and [Twitter account](https://twitter.com/typescript).
+## Tech Stack
 
-Find others who are using TypeScript at [our community page](https://www.typescriptlang.org/community/).
+- **Framework**: React Native with Expo
+- **Language**: TypeScript
+- **State Management**: React Hooks
+- **UI Components**: Native components
 
-## Installing
+## How It Works
 
-For the latest stable version:
+### Calculation Process
 
-```bash
-npm install -D typescript
-```
+The calculator follows a simple yet effective data flow:
 
-For our nightly builds:
+1. **Input Capture**:
+   - Numbers are stored as strings in the UI state
+   - First operand is saved when an operator is pressed
 
-```bash
-npm install -D typescript@next
-```
+2. **Calculation Process**:
+   ```
+   String → Number → Operation → Number → String
+   "53"   → 53     → +        → 125    → "125"
+   ```
 
-## Contribute
+3. **Why String → Number → String?**
+   - **Strings for UI**: Better for display and input handling
+   - **Numbers for Calculation**: Required for accurate arithmetic
+   - **Back to Strings**: For display and consistent state management
 
-There are many ways to [contribute](https://github.com/microsoft/TypeScript/blob/main/CONTRIBUTING.md) to TypeScript.
-* [Submit bugs](https://github.com/microsoft/TypeScript/issues) and help us verify fixes as they are checked in.
-* Review the [source code changes](https://github.com/microsoft/TypeScript/pulls).
-* Engage with other TypeScript users and developers on [StackOverflow](https://stackoverflow.com/questions/tagged/typescript).
-* Help each other in the [TypeScript Community Discord](https://discord.gg/typescript).
-* Join the [#typescript](https://twitter.com/search?q=%23TypeScript) discussion on Twitter.
-* [Contribute bug fixes](https://github.com/microsoft/TypeScript/blob/main/CONTRIBUTING.md).
+## Getting Started
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see
-the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com)
-with any additional questions or comments.
+### Prerequisites
 
-## Documentation
+- Node.js (v14 or later)
+- npm or yarn
+- Expo CLI
 
-*  [TypeScript in 5 minutes](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
-*  [Programming handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
-*  [Homepage](https://www.typescriptlang.org/)
+### Installation
 
-## Roadmap
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/SmartCalcShop.git
+   cd SmartCalcShop
+   ```
 
-For details on our planned features and future direction, please refer to our [roadmap](https://github.com/microsoft/TypeScript/wiki/Roadmap).
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Start the development server:
+   ```bash
+   npx expo start
+   ```
+
+4. Open the app:
+   - Use Expo Go on your physical device by scanning the QR code
+   - Press 'i' to open in iOS simulator (requires Xcode)
+   - Press 'a' to open in Android emulator (requires Android Studio)
+
+## Future Enhancements
+
+- Scientific calculator mode
+- Calculation history
+- Themes and customization options
+- Unit conversions
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- Inspired by the iOS calculator design
+- Built with React Native and Expo

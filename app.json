@@ -1,4 +1,15 @@
 {
-  "name": "SmartCalcShop",
-  "slug": "SmartCalcShop"
+  "expo": {
+    "name": "SmartCalcShop",
+    "slug": "smartcalcshop",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    }
+  }
 }
